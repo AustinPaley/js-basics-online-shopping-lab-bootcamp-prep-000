@@ -24,19 +24,23 @@ function viewCart() {
 if (cart.length === 0){
   console.log("Your shopping cart is empty.")
 } 
-else if (cart.length === 1) {
-  console.log(`In your cart, you have ${Object.keys(cart[0])} at $${Object.values(cart[0])}.`);
-}
-else if (cart.length === 2){
-  console.log(`In your cart, you have ${Object.keys(cart[0])} at $${Object.values(cart[0])} and ${Object.keys(cart[1])} at $${Object.values(cart[1])}.`)
-}
-else {
-  for(var i=0; i < cart.length-1; i++){
-    items.push(`${Object.keys(cart[i])} at $${cart[i][Object.keys(cart[i])]}`);
-  }
-  console.log(`In your cart, you have${items}, and ${Object.keys(cart[cart.length-1])} at $${cart[cart.length-1][Object.keys(cart[cart.length-1])]}.`)
-}
-}
++  const itemsWithPrices = [];
++
++  for (let i = 0; i < cart.length; i++) {
++    var itemNames = Object.keys(cart[i]);
++    var itemName = itemNames[0];
++    var itemPrice = cart[i][itemName]
++
++    itemsWithPrices.push(`${itemName} at $${itemPrice}`)
++  }
++
++  if (itemsWithPrices.length === 1) {
++    return console.log(`In your cart, you have ${itemsWithPrices.join()}.`)
++  } else if (itemsWithPrices.length === 2) {
++    return console.log(`In your cart, you have ${itemsWithPrices[0]} and ${itemsWithPrices.slice(-1)}.`)
++  } else {
++    return console.log(`In your cart, you have ${itemsWithPrices.slice(0,-1).join(', ')}, and ${itemsWithPrices.slice(-1)}.`)
++  }
 
 function total() {
 let totalamount = 0
