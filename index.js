@@ -32,7 +32,7 @@ else if (cart.length === 2){
 }
 else {
   for(let i=0; i < cart.length; i++){
-    items.push(`${Object.keys)
+    items.push(`${Object.keys(cart))
   }
 }
 }
