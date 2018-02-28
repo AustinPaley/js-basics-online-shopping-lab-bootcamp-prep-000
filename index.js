@@ -34,7 +34,7 @@ else {
   for(var i=0; i < cart.length-1; i++){
     items.push(`${Object.keys(cart[i])} at $${cart[i][Object.keys(cart[i])]}`);
   }
-  console.log(`In your cart, you have ${items}, and ${Object.keys(cart[cart.length-1])} at $${cart[cart.length-1][Object.keys(cart[cart.length-1])]}.`)
+  console.log(`In your cart, you have${items}, and ${Object.keys(cart[cart.length-1])} at $${cart[cart.length-1][Object.keys(cart[cart.length-1])]}.`)
 }
 }
 
