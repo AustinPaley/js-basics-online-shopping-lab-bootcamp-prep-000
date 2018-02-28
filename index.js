@@ -34,7 +34,7 @@ items.push(`${itemName} at $${itemPrice}`)
 }
 
 if (items.length === 1) {
-return console.log(`In your cart, you have ${itemsWithPrices.join()}.`)
+return console.log(`In your cart, you have ${items.join()}.`)
 } else if (itemsWithPrices.length === 2) {
 return console.log(`In your cart, you have ${itemsWithPrices[0]} and ${itemsWithPrices.slice(-1)}.`)
 } else {
