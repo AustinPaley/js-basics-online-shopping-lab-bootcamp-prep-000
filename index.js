@@ -35,10 +35,10 @@ items.push(`${itemName} at $${itemPrice}`)
 
 if (items.length === 1) {
 return console.log(`In your cart, you have ${items.join()}.`)
-} else if (itemsWithPrices.length === 2) {
+} else if (items.length === 2) {
 return console.log(`In your cart, you have ${items[0]} and ${items.slice(-1)}.`)
 } else {
-return console.log(`In your cart, you have ${items.slice(0,-1).join(', ')}, and ${itemsWithPrices.slice(-1)}.`)
+return console.log(`In your cart, you have ${items.slice(0,-1).join(', ')}, and ${items.slice(-1)}.`)
 }
 }
 
