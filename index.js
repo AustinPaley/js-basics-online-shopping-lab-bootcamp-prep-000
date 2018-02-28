@@ -22,23 +22,16 @@ cart.push(item_object)
 function viewCart() {
 if (cart.length === 0){
   console.log("Your shopping cart is empty.")
-}
+} 
 else {
-var textholder = "In your cart, you have "
-for (var i=0, l = cart.length; i < l; i++){
-  for(var list in cart[i]){
-    textholder+=`${list} at $${cart[i][list]}`
-    if(i!==cart.length - 1){
-      textholder+=", "
+   var items = [];
+    for (var i = 0; i < cart.length; i++) {
+      for (var item in cart[i]) {
+        items.push(item + " at $" + cart[i][item])
+      }
     }
-    else{
-      textholder+="."
-    }
+    console.log("In your cart, you have " + items.join(", ") + ".");
   }
-    
-  }
-  console.log(textholder)
-}
 }
 
 function total() {
