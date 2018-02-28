@@ -23,7 +23,8 @@ function viewCart() {
 if (cart.length === 0){
   console.log("Your shopping cart is empty.")
 } 
-else if {
+else if (cart.length === 1) {
+  console.log(``)
   
 }
 }
