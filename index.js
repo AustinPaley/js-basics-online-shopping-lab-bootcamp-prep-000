@@ -38,7 +38,7 @@ return console.log(`In your cart, you have ${items.join()}.`)
 } else if (itemsWithPrices.length === 2) {
 return console.log(`In your cart, you have ${items[0]} and ${items.slice(-1)}.`)
 } else {
-return console.log(`In your cart, you have ${itemsWithPrices.slice(0,-1).join(', ')}, and ${itemsWithPrices.slice(-1)}.`)
+return console.log(`In your cart, you have ${items.slice(0,-1).join(', ')}, and ${itemsWithPrices.slice(-1)}.`)
 }
 }
 
