@@ -27,7 +27,7 @@ else if (cart.length === 1) {
   console.log(`In your cart, you have ${Object.keys(cart[0])} at $${Object.values(cart[0])}.`);
 }
 else if (cart.length === 2){
-  console.log(`In your cart, you have )
+  console.log(`In your cart, you have ${Object.keys(cart[0])} at $${Object.values(cart[0])} and ${Object.keys(cart[1])} at $${Object.values(cart[1])}.`)
 }
 }
 
