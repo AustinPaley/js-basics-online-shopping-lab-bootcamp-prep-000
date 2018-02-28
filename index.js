@@ -23,24 +23,24 @@ function viewCart() {
   var items = [];
 if (cart.length === 0){
   console.log("Your shopping cart is empty.")
-} 
-+  const itemsWithPrices = [];
-+
-+  for (let i = 0; i < cart.length; i++) {
-+    var itemNames = Object.keys(cart[i]);
-+    var itemName = itemNames[0];
-+    var itemPrice = cart[i][itemName]
-+
-+    itemsWithPrices.push(`${itemName} at $${itemPrice}`)
-+  }
-+
-+  if (itemsWithPrices.length === 1) {
-+    return console.log(`In your cart, you have ${itemsWithPrices.join()}.`)
-+  } else if (itemsWithPrices.length === 2) {
-+    return console.log(`In your cart, you have ${itemsWithPrices[0]} and ${itemsWithPrices.slice(-1)}.`)
-+  } else {
-+    return console.log(`In your cart, you have ${itemsWithPrices.slice(0,-1).join(', ')}, and ${itemsWithPrices.slice(-1)}.`)
-+  }
+}
+
+for (let i = 0; i < cart.length; i++) {
+var itemNames = Object.keys(cart[i]);
+var itemName = itemNames[0];
+var itemPrice = cart[i][itemName]
+
+items.push(`${itemName} at $${itemPrice}`)
+}
+
+if (itemsWithPrices.length === 1) {
+return console.log(`In your cart, you have ${itemsWithPrices.join()}.`)
+} else if (itemsWithPrices.length === 2) {
+return console.log(`In your cart, you have ${itemsWithPrices[0]} and ${itemsWithPrices.slice(-1)}.`)
+} else {
+return console.log(`In your cart, you have ${itemsWithPrices.slice(0,-1).join(', ')}, and ${itemsWithPrices.slice(-1)}.`)
+}
+}
 
 function total() {
 let totalamount = 0
